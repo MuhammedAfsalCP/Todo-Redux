@@ -19,14 +19,14 @@ function Component() {
   return (
     <div className='w-full min-h-[100vh] bg-[url(https://img.freepik.com/free-vector/gradient-dynamic-blue-lines-background_23-2148995756.jpg)] bg-cover flex justify-center flex-wrap pt-5'>
       <div className='w-[80%] flex flex-col h-auto' >
-        <div className=' h-10 bg-white flex justify-between m-4'>
+        <div className='rounded-md h-10 bg-white flex justify-between m-4'>
           <input value={todo} onChange={save} className='ml-2 w-[80%] outline-none' type="text" placeholder='Todo' />
-          <button onClick={Change} className='bg-green-600 w-[17%]'><box-icon name='check' color='#ffffff' ></box-icon></button>
+          <button onClick={Change} className='rounded-tr-md rounded-br-md bg-green-600 w-[17%]'><box-icon name='check' color='#ffffff' ></box-icon></button>
         </div>
         {todos.map((val,index)=>{
-        return val!=""?<div className=' h-10 bg-white flex justify-between m-4'>
+        return val!=""?<div className='rounded-md h-10 bg-white flex justify-between m-4'>
         <p className='mt-2 ml-2'>{val}</p>  
-         <button onClick={() => decrease(index)}className='bg-red-600 w-[17%]'><box-icon name='x' color='#ffffff'></box-icon></button>
+         <button onClick={() => decrease(index)}className='rounded-tr-md rounded-br-md bg-red-600 w-[17%]'><box-icon name='x' color='#ffffff'></box-icon></button>
        </div>:null
         })}
       </div>
