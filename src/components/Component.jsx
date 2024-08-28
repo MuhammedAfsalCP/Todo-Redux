@@ -25,7 +25,7 @@ function Component() {
         </div>
         {todos.map((val,index)=>{
         return val!=""?<div className=' h-10 bg-white flex justify-between m-4'>
-        <p className='mt-2'>{val}</p>  
+        <p className='mt-2 ml-2'>{val}</p>  
          <button onClick={decrease}className='bg-red-600 w-[17%]'><box-icon name='x' color='#ffffff'></box-icon></button>
        </div>:null
         })}
