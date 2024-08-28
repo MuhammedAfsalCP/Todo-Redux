@@ -24,9 +24,9 @@ function Component() {
           <button onClick={Change} className='bg-green-600 w-[17%]'><box-icon name='check' color='#ffffff' ></box-icon></button>
         </div>
         {todos.map((val,index)=>{
-        return val!=""?<div className=' h-10 bg-white flex justify-between m-4'>
+        return val!=""?<div key={index} className=' h-10 bg-white flex justify-between m-4'>
         <p className='mt-2 ml-2'>{val}</p>  
-         <button onClick={decrease}className='bg-red-600 w-[17%]'><box-icon name='x' color='#ffffff'></box-icon></button>
+         <button onClick={() => decrease(index)}className='bg-red-600 w-[17%]'><box-icon name='x' color='#ffffff'></box-icon></button>
        </div>:null
         })}
       </div>
